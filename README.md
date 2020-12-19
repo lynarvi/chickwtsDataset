@@ -223,7 +223,7 @@ We will use **`geom_boxplot()`** to find the outliers and looking at the symmetr
     num_feed
 
 <div align="left">
-    <img width="1024" height="690"
+    <img width="586" height="586"
          src="https://github.com/lynarvi/chickwtsDataset/blob/main/number%20of%20chicks%20fed%20by%20type%20of%20feed.jpeg">
 <div/>
 
