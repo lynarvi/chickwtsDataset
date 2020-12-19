@@ -194,7 +194,7 @@ We use **`as_tibble()`** for instant creation of data frames.
 
 ## Plotting
 
-### Boxplot
+### boxplot
 
 The boxplot compactly displays the distribution of a continuous variable. It visualises five summary statistics (the median, two hinges and two whiskers), and all "outlying" points individually.
 
@@ -212,7 +212,7 @@ We will use **`geom_boxplot()`** to find the outliers and looking at the symmetr
          src="https://github.com/lynarvi/chickwtsDataset/blob/main/relationship%20of%20the%20variables.jpeg">
 <div/>
 
-### Geom_bar 
+### geom_bar 
 
 `geom_bar()` was used as it counts the number of cases at each "x" position, in this case the "x" position is the number of times each type feed was used. This translates into the number of chicks that were fed by a particular type of feed.
 
@@ -225,5 +225,65 @@ We will use **`geom_boxplot()`** to find the outliers and looking at the symmetr
 <div align="left">
     <img width="586" height="586"
          src="https://github.com/lynarvi/chickwtsDataset/blob/main/number%20of%20chicks%20fed%20by%20type%20of%20feed.jpeg">
+<div/>
+
+
+### Min, Max and Average Weight of the Chicks by Type of Feed
+
+in this part, the dataframe is grouped according to the type of feed.
+    
+    Summarize = chick_data %>% group_by(feed)
+    
+    summarized = Summarize %>% summarise(min=min(weight),max=max(weight),mean=min(weight))
+    `summarise()` ungrouping output (override with `.groups` argument)
+    
+    summarized
+    # A tibble: 6 x 4
+      feed        min   max  mean
+      <fct>     <dbl> <dbl> <dbl>
+    1 casein      216   404   216
+    2 horsebean   108   227   108
+    3 linseed     141   309   141
+    4 meatmeal    153   380   153
+    5 soybean     158   329   158
+    6 sunflower   226   423   226
+
+### geom_point 
+
+`geom_point` was used to pin-point the minimum, maximum and mean ammount of weight gained by the chicks for each type of feed.
+
+* Minimum Weight
+
+        minimum = summarized %>%
+        + ggplot(aes(x=feed, y=min)) + geom_point(color = "red") +
+        + labs(title = "Minimum Weight by TYpe of Feed", y = "Chick Weight(grams)", x = "Feed Type") + theme_minimal()
+
+<div align="left">
+    <img width="586" height="586"
+         src="https://github.com/lynarvi/chickwtsDataset/blob/main/minimum%20weight%20by%20type%20of%20feed.jpeg">
+<div/>
+
+* Maximum Weight
+
+        maximum = summarized %>%
+        + ggplot(aes(x=feed,y=max)) + geom_point(color = "blue") +
+        + labs(title = "Maximum Weight by Type of Feed", x="Feed Type",y="Chick Weight (grams)") + theme_minimal()
+ 
+ <div align="left">
+    <img width="586" height="586"
+         src="https://github.com/lynarvi/chickwtsDataset/blob/main/maximum%20weight.jpeg">
+<div/>
+
+* Mean Weight
+
+        mean_weight = summarized %>% 
+        + ggplot(aes(x=feed,y=mean))+
+        + geom_point(color="magenta") +
+        +labs(title = "Mean Weight by Type of Feed",y="Chick Weight (grams)",x="Feed Type")+
+        + theme_minimal()
+
+ <div align="left">
+    <img width="586" height="586"
+         src="https://github.com/lynarvi/chickwtsDataset/blob/main/mean%20weight.jpeg">
 <div/>
 
