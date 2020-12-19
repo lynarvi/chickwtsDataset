@@ -119,7 +119,7 @@ We use `nrow()` to know how many rows are the in the data set.
     
 ### Head Count
 
-We use **`head()`** for displaying the first 6 columns of the data set.
+We use **`head()`** for displaying the first 6 rows of the data set.
 
     head(chickwts)
  
