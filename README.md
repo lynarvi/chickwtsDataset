@@ -35,23 +35,23 @@ The easiest way to install these two packages is to install the whole tidyverse 
 
     chickwts
   
-  weight      feed
-1     179 horsebean
-2     160 horsebean
-3     136 horsebean
-4     227 horsebean
-5     217 horsebean
-6     168 horsebean
-7     108 horsebean
-8     124 horsebean
-9     143 horsebean
-10    140 horsebean
-11    309   linseed
-12    229   linseed
-13    181   linseed
-14    141   linseed
-15    260   linseed
-16    203   linseed
+     weight      feed
+    1     179 horsebean
+    2     160 horsebean
+    3     136 horsebean
+    4     227 horsebean
+    5     217 horsebean
+    6     168 horsebean
+    7     108 horsebean
+    8     124 horsebean
+    9     143 horsebean
+    10    140 horsebean
+    11    309   linseed
+    12    229   linseed
+    13    181   linseed
+    14    141   linseed
+    15    260   linseed
+    16    203   linseed
 17    148   linseed
 18    169   linseed
 19    213   linseed
