@@ -31,11 +31,11 @@ The following data and graphs displays the relationship between the type of feed
 
 The easiest way to install these two packages is to install the whole tidyverse package. But at this instance we will just separately install them.
 
-# Viewing chickwts data set
+## Codes
+
+### Viewing chickwts data set
 
     chickwts
-  
-  
   
          weight      feed
     1     179 horsebean
@@ -109,4 +109,27 @@ The easiest way to install these two packages is to install the whole tidyverse 
     69    222    casein
     70    283    casein
     71    332    casein
+
+### Row Count
+
+We use `nrow()` to know how many rows are the in the data set.
+
+    nrow(chickwts)
+    [1] 71
+    
+### Head Count
+
+We use `head()` for displaying the first 6 columns of the data set.
+
+    head(chickwts)
+ 
+         weight   feed
+    1    179 horsebean
+    2    160 horsebean
+    3    136 horsebean
+    4    227 horsebean
+    5    217 horsebean
+    6    168 horsebean
+
+
 
