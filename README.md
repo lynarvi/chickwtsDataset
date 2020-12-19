@@ -23,17 +23,17 @@ The following data and graphs displays the relationship between the type of feed
 
 **dplyr** is a grammar of data manipulation providing a consistent set of verbs that help you solve the most common data manipulation challenges. These are combined naturally with `group_by()` which allows you to perform any operation "by group". 
 
-  `install.packages("dplyr")`
+    install.packages("dplyr")
  
 **ggplot2** is a system for declaratively creating graphics, based on The Grammar of Graphics. You provide the data , tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.
 
-  `install.packages(ggplot2)`
+    install.packages(ggplot2)
 
 The easiest way to install these two packages is to install the whole tidyverse package. But at this instance we will just separately install them.
 
 # Viewing chickwts data set
 
-  `chickwts`
+    chickwts
   
   weight      feed
 1     179 horsebean
