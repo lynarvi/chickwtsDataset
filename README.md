@@ -119,7 +119,7 @@ We use `nrow()` to know how many rows are the in the data set.
     
 ### Head Count
 
-We use `head()` for displaying the first 6 columns of the data set.
+We use **`head()`** for displaying the first 6 columns of the data set.
 
     head(chickwts)
  
@@ -131,13 +131,64 @@ We use `head()` for displaying the first 6 columns of the data set.
     5    217 horsebean
     6    168 horsebean
     
-### Select weight column
+### Selecting weight column
 
     chickwts$weight
+    
     [1] 179 160 136 227 217 168 108 124 143 140 309 229 181 141 260 203 148 169 213
     [20] 257 244 271 243 230 248 327 329 250 193 271 316 267 199 171 158 248 423 340
     [39] 392 339 341 226 320 295 334 322 297 318 325 257 303 315 380 153 263 242 206
     [58] 344 258 368 390 379 260 404 318 352 359 216 222 283 332
 
+### Selecting feed column
 
+    chickwts$feed
+    
+     [1] horsebean horsebean horsebean horsebean horsebean horsebean horsebean
+     [8] horsebean horsebean horsebean linseed   linseed   linseed   linseed  
+    [15] linseed   linseed   linseed   linseed   linseed   linseed   linseed  
+    [22] linseed   soybean   soybean   soybean   soybean   soybean   soybean  
+    [29] soybean   soybean   soybean   soybean   soybean   soybean   soybean  
+    [36] soybean   sunflower sunflower sunflower sunflower sunflower sunflower
+    [43] sunflower sunflower sunflower sunflower sunflower sunflower meatmeal 
+    [50] meatmeal  meatmeal  meatmeal  meatmeal  meatmeal  meatmeal  meatmeal 
+    [57] meatmeal  meatmeal  meatmeal  casein    casein    casein    casein   
+    [64] casein    casein    casein    casein    casein    casein    casein   
+    [71] casein   
+    Levels: casein horsebean linseed meatmeal soybean sunflower
+
+### Determining feed levels
+
+    levels(chickwts$feed)
+    
+    [1] "casein"    "horsebean" "linseed"   "meatmeal"  "soybean"   "sunflower"
+
+### Classification of the variables
+
+    sapply(chickwts,class)
+    
+    weight      feed 
+    "numeric"  "factor" 
+
+### Tibbled Data set
+
+We use **`as_tibble()`** for instant creation of data frames.
+
+    chick_data = as_tibble(chickwts)
+    chick_data
+    
+    # A tibble: 71 x 2
+        weight feed     
+        <dbl> <fct>    
+     1    179 horsebean
+     2    160 horsebean
+     3    136 horsebean
+     4    227 horsebean
+     5    217 horsebean
+     6    168 horsebean
+     7    108 horsebean
+     8    124 horsebean
+     9    143 horsebean
+    10    140 horsebean
+    # ... with 61 more rows
 
