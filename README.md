@@ -205,7 +205,7 @@ We will use **`geom_boxplot()`** to find the outliers and looking at the symmetr
     + labs(title = "Relationship Between Chick Weight & Type of Feed", x="Feed Type", y="Weight in Grams") 
     weight_feed
 
-<div align="center">
-    <img width="800" height="800"
+<div align="left">
+    <img width="1024" height="690"
          src="https://github.com/lynarvi/chickwtsDataset/blob/main/relationship%20of%20the%20variables.jpeg">
 <div/>
