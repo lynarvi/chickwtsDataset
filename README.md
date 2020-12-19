@@ -194,6 +194,8 @@ We use **`as_tibble()`** for instant creation of data frames.
 
 ## Plotting
 
+### Boxplot
+
 The boxplot compactly displays the distribution of a continuous variable. It visualises five summary statistics (the median, two hinges and two whiskers), and all "outlying" points individually.
 
 We will use **`geom_boxplot()`** to find the outliers and looking at the symmetry of the distribution.
@@ -209,3 +211,19 @@ We will use **`geom_boxplot()`** to find the outliers and looking at the symmetr
     <img width="1024" height="690"
          src="https://github.com/lynarvi/chickwtsDataset/blob/main/relationship%20of%20the%20variables.jpeg">
 <div/>
+
+### Geom_bar 
+
+`geom_bar()` was used as it counts the number of cases at each "x" position, in this case the "x" position is the number of times each type feed was used. This translates into the number of chicks that were fed by a particular type of feed.
+
+    num_feed = ggplot(chick_data, aes(x=as.factor(feed),fill=as.factor(feed))) +
+    + geom_bar() + scale_fill_brewer(palette = "Set3") +
+    + theme(legend.position = "none")+
+    + labs(title = "Number of Chicks Fed by Each Type of Feed", x = "Feed Type", y = "Number of Chicks")
+    num_feed
+
+<div align="left">
+    <img width="1024" height="690"
+         src="https://github.com/lynarvi/chickwtsDataset/blob/main/number%20of%20chicks%20fed%20by%20type%20of%20feed.jpeg">
+<div/>
+
