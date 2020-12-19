@@ -37,7 +37,7 @@ The easiest way to install these two packages is to install the whole tidyverse 
 
     chickwts
   
-         weight      feed
+        weight      feed
     1     179 horsebean
     2     160 horsebean
     3     136 horsebean
@@ -191,4 +191,17 @@ We use **`as_tibble()`** for instant creation of data frames.
      9    143 horsebean
     10    140 horsebean
     # ... with 61 more rows
+
+## Plotting
+
+The boxplot compactly displays the distribution of a continuous variable. It visualises five summary statistics (the median, two hinges and two whiskers), and all "outlying" points individually.
+
+We will use **`geom_boxplot()`** to find the outliers and looking at the symmetry of the distribution.
+
+    weight_feed = chick_data %>%
+    + ggplot(aes(x=feed,y=weight, fill=feed))+
+    + geom_boxplot()+ scale_fill_brewer(palette="BuPu") +
+    + theme(legend.position = "none") +
+    + labs(title = "Relationship Between Chick Weight & Type of Feed", x="Feed Type", y="Weight in Grams") 
+    weight_feed
 
